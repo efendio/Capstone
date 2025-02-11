@@ -1,0 +1,306 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Forgot Password</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/templatemo-medic-care.css' %}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background: linear-gradient(to right, #ece9e6, #ffffff);
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Background section for forgot password */
+    #forgot-password {
+        padding: 120px 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+            url('{% static "images/login-bg.jpg" %}') center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    
+    /* Darkened background overlay */
+    #forgot-password .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('{% static "images/gallery/backgroun3.jpg" %}') center/cover no-repeat;
+        filter: brightness(50%);
+    }
+    
+    /* Forgot password container */
+    .forgot-container {
+        max-width: 450px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.85);  /* Transparent background */
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+        animation: fadeInUp 0.9s ease-out forwards;
+        backdrop-filter: blur(10px);
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Heading styling */
+    .forgot-container h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    /* Subheading */
+    .forgot-container p {
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    /* Form styling */
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    /* Input styling */
+    .form-group input {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+    }
+    
+    /* Input focus effect */
+    .form-group input:focus {
+        border-color: #007bff;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+    
+    /* Button styling */
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    /* Button hover effect */
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+    
+    /* Links section */
+    .links {
+        text-align: center;
+        margin-top: 25px;
+    }
+    
+    .links p {
+        font-size: 14px;
+        margin: 5px 0;
+        color: #777;
+    }
+    
+    .links a {
+        color: #007bff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .links a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .forgot-container {
+            padding: 25px;
+        }
+    
+        .forgot-container h2 {
+            font-size: 24px;
+        }
+    
+        .form-group input {
+            padding: 12px 18px;
+            font-size: 15px;
+        }
+    
+        button {
+            font-size: 16px;
+        }
+    }
+    
+    </style>
+</head>
+
+<body id="top">
+<main>
+
+    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+        <div class="container">
+            <a class="navbar-brand mx-auto d-lg-none" href="{% url 'index' %}">
+                {{ heading }}
+                <strong class="d-block">Health Hospital</strong>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+
+                    <a class="navbar-brand d-none d-lg-block text-center" href="{% url 'index' %}">
+                        {{ heading }}
+                        <strong class="d-block">Health Hospital</strong>
+                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</main>
+
+<section class="section-padding" id="forgot-password">
+    <div class="background"></div>
+    <div class="forgot-container">
+        <h2>Forgot Password</h2>
+        <p>Enter your email to receive an OTP</p>
+        <form action="{% url 'otp' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Enter your email" />
+            </div>
+            <button type="submit">Send OTP</button>
+        </form><br>
+                <p>Remember your password? <a href="{% url 'login' %}">Login</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="site-footer section-padding" id="contact">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-5 me-auto col-12">
+                <h5 class="mb-lg-4 mb-3">Opening Hours</h5>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex">
+                        Saturday and Sunday : Closed
+                    </li>
+
+                    <li class="list-group-item d-flex">
+                        Monday, Tuesday - Firday
+                        <span>8:00 AM - 5:30 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
+                <h5 class="mb-lg-4 mb-3">{{ heading }}</h5>
+
+                <p><a href="mailto:hello@company.co">{{ email }}</a><p>
+
+                <p>{{ address }}</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 ms-auto">
+                <h5 class="mb-lg-4 mb-3">Socials</h5>
+
+                <ul class="social-icon">
+                    <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                    <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+
+                    <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                    <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                <p class="copyright-text">Copyright © HealthCare 2025
+                <br><br>Design: <a href="" target="_parent">{{ heading }} Team</a></p>
+            </div>
+
+        </div>
+    </section>
+</footer>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

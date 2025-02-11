@@ -1,0 +1,427 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{{ title }}</title>
+   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/templatemo-medic-care.css' %}" rel="stylesheet">
+
+    </head>
+    
+    <body id="top">
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand mx-auto d-lg-none" href="{% url 'index' %}">
+                        {{ heading }}
+                        <strong class="d-block">Hospital Services</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About</a>
+                            </li> 
+
+                            <a class="navbar-brand d-none d-lg-block text-center" href="{% url 'index' %}">
+                                {{ heading }}
+                                <strong class="d-block">Hospital Services</strong>
+                            </a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="hero" id="hero">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="{% static 'images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{% static 'images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="heroText d-flex flex-column justify-content-center">
+
+                                <h1 class="mt-auto mb-2">
+                                    Better
+                                    <div class="animated-info">
+                                        <span class="animated-item">health</span>
+                                        <span class="animated-item">days</span>
+                                        <span class="animated-item">lives</span>
+                                    </div>
+                                </h1>
+
+                                <p class="mb-4">The AI-HealthCare project aims to revolutionize healthcare in Timor-Leste by integrating smart digital 
+                                    solutions powered by artificial intelligence (AI). The goal of this project is to enhance the accessibility, quality, 
+                                    and efficiency of healthcare services in the country, particularly in remote and underserved areas. </p>
+
+                                <div class="heroLinks d-flex flex-wrap align-items-center">
+                                    <a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
+
+                                    <p class="contact-phone mb-0"><i class="bi-phone"></i> 010-020-0340</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <h2 class="mb-lg-3 mb-3">Overview</h2>
+
+                            <p>By leveraging AI-driven technologies, 
+                                the project focuses on improving medical diagnostics, enabling remote consultations, optimizing health data management, 
+                                and providing predictive insights for better decision-making. </p>
+
+                            <p>This will ultimately lead to a more responsive, inclusive, 
+                                and effective healthcare system, improving the well-being of individuals across Timor-Leste. <a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">support us a little</a> via PayPal if this template is good and useful for your work.</p>
+                        </div>
+
+                        <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                            <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                                <p class="featured-text"><span class="featured-number">15</span> Years<br> of Experiences</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-6 ps-0">
+                            <img src="{% static 'images/gallery/medium-shot-man-getting-vaccine.jpg' %}" class="img-fluid galleryImage" alt="get a vaccine" title="get a vaccine for yourself">
+                        </div>
+
+                        <div class="col-lg-6 col-6 pe-0">
+                            <img src="{% static 'images/gallery/female-doctor-with-presenting-hand-gesture.jpg' %}" class="img-fluid galleryImage" alt="wear a mask" title="wear a mask to protect yourself">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding pb-0" id="timeline">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="text-center mb-lg-5 mb-4">Our Services</h2>
+                        
+                        <div class="timeline">
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light text-center">AI-Powered Telemedicine Solutions</h3>
+
+                                    <p>Providing remote consultations and healthcare services through AI-enabled platforms, 
+                                        enabling patients in remote areas to access medical professionals via smartphones or computers.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-patch-check-fill timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>1. Service</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light">AI Diagnostic Assistance</h3>
+
+                                    <p>Using AI algorithms to analyze medical data, such as medical images or patient symptoms, 
+                                        to help doctors diagnose diseases accurately and quickly, even in regions with limited access to specialists. <a href="https://www.google.com/search?q=free+css" target="_blank"></a> </p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-book timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>2. Service</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light text-center">Health Data Management and Analytics</h3>
+
+                                    <p>Implementing AI-based systems to efficiently organize and manage patient data, 
+                                        ensuring healthcare providers can easily track patient histories, 
+                                        improve decision-making, and optimize healthcare delivery.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-file-medical timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>3. Service</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+                                <div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light text-center">Predictive Health Monitoring</h3>
+
+                                    <p class="mb-0 pb-0">Utilizing AI to predict disease outbreaks, monitor trends in public health, 
+                                        and offer early warnings for healthcare providers to take proactive measures, 
+                                        improving disease prevention and resource allocation.</p>
+                                    
+                                    <p></p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-globe timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>4. Service</time>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                                <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                    <h3 class=" text-light text-center">Healthcare Education and Awareness Platforms</h3>
+
+                                    <p>Developing AI-driven apps and chatbots to educate patients on preventive healthcare, 
+                                        available services, and health literacy, improving community awareness and 
+                                        empowering individuals to take charge of their health.<a rel="nofollow" href="https://templatemo.com/contact" target="_parent">visit our contact page</a> for more information.</p>
+                                </div>
+
+                                <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                    <i class="bi-person timeline-icon"></i>
+                                </div>
+
+                                <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+                                    <time>5. Service</time>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding pb-0" id="reviews">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2 class="text-center mb-lg-5 mb-4">Our Patients</h2>
+
+                            <div class="owl-carousel reviews-carousel">
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Health Care</strong></p>
+
+                                    <p class="reviews-text w-100">Phasellus ligula ante, tempus ac imperdiet ut, mattis ac nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                                    <img src="{% static 'images/reviews/beautiful-woman-face-portrait-brown-background.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Marie</strong>
+
+                                        <span class="text-muted">Patient</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Doctor cares everyone!</strong></p>
+
+                                    <p class="reviews-text w-100">Donec in elementum orci, nec posuere ligula. Quisque vulputate diam et ullamcorper ullamcorper. Pellentesque vestibulum neque at leo fermentum mattis.</p>
+
+                                    <img src="{% static 'images/reviews/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg '}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Ben Walker</strong>
+
+                                        <span class="text-muted">Recovered</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Great services!</strong></p>
+
+                                    <p class="reviews-text w-100">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sit amet velit vitae purus aliquam efficitur.</p>
+
+                                    <img src="{% static 'images/reviews/portrait-british-woman.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Laura Zono</strong>
+
+                                        <span class="text-muted">New Patient</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Advices</strong></p>
+
+                                    <p class="reviews-text w-100">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+                                    <img src="{% static 'images/reviews/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Rosey</strong>
+
+                                        <span class="text-muted">Almost Recovered</span>
+                                    </figcaption>
+                                </figure>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-5 me-auto col-12">
+                        <h5 class="mb-lg-4 mb-3">Opening Hours</h5>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex">
+                                Saturday and Sunday : Closed
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                Monday, Tuesday - Firday
+                                <span>8:00 AM - 5:30 PM</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
+                        <h5 class="mb-lg-4 mb-3">{{ heading }}</h5>
+
+                        <p><a href="mailto:hello@company.co">{{ email }}</a><p>
+
+                        <p>{{ address }}</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 ms-auto">
+                        <h5 class="mb-lg-4 mb-3">Socials</h5>
+
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                        <p class="copyright-text">Copyright © HealthCare 2025
+                        <br><br>Design: <a href="https://templatemo.com" target="_parent">{{ heading }} Team</a></p>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/scrollspy.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>

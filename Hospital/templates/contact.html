@@ -1,0 +1,327 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{{ title }}</title>
+   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/templatemo-medic-care.css' %}" rel="stylesheet">
+
+    </head>
+    
+    <body id="top">
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand mx-auto d-lg-none" href="{% url 'index' %}">
+                        {{ heading }}
+                        <strong class="d-block">Hospital Services</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About</a>
+                            </li> 
+
+                            <a class="navbar-brand d-none d-lg-block text-center" href="{% url 'index' %}">
+                                {{ heading }}
+                                <strong class="d-block">Hospital Services</strong>
+                            </a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                    <i class="fa fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Address</p>
+                                    <h5 class="mb-0">{{ address }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                    <i class="fa fa-phone-alt text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Call Us Now</p>
+                                    <h5 class="mb-0">{{ number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                    <i class="fa fa-envelope-open text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Mail Us Now</p>
+                                    <h5 class="mb-0">{{ email }}m</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-light rounded p-5">
+                                <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
+                                <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
+                                <p class="mb-4">We’re here to help! If you have any questions or need more information about our services, feel free to reach out. 
+                                    Our team is ready to assist you with all your healthcare needs.<br><br> Contact us today and lets improve healthcare together!
+                                    <!--<a href="https://htmlcodex.com/contact-form">Download Now</a>-->.</p>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                                <label for="name">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                                <label for="email">Your Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                                <label for="subject">Subject</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                                <label for="message">Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100" style="min-height: 400px;">
+                                <iframe class="rounded w-100 h-100"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                                frameborder="0" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section-padding pb-0" id="reviews">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2 class="text-center mb-lg-5 mb-4">Our Patients</h2>
+
+                            <div class="owl-carousel reviews-carousel">
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Health Care</strong></p>
+
+                                    <p class="reviews-text w-100">Phasellus ligula ante, tempus ac imperdiet ut, mattis ac nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                                    <img src="{% static 'images/reviews/beautiful-woman-face-portrait-brown-background.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Marie</strong>
+
+                                        <span class="text-muted">Patient</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Doctor cares everyone!</strong></p>
+
+                                    <p class="reviews-text w-100">Donec in elementum orci, nec posuere ligula. Quisque vulputate diam et ullamcorper ullamcorper. Pellentesque vestibulum neque at leo fermentum mattis.</p>
+
+                                    <img src="{% static 'images/reviews/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg '}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Ben Walker</strong>
+
+                                        <span class="text-muted">Recovered</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Great services!</strong></p>
+
+                                    <p class="reviews-text w-100">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sit amet velit vitae purus aliquam efficitur.</p>
+
+                                    <img src="{% static 'images/reviews/portrait-british-woman.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Laura Zono</strong>
+
+                                        <span class="text-muted">New Patient</span>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded">
+                                    <div class="reviews-stars">
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star-fill"></i>
+                                        <i class="bi-star"></i>
+                                        <i class="bi-star"></i>
+                                    </div>
+
+                                    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Advices</strong></p>
+
+                                    <p class="reviews-text w-100">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+                                    <img src="{% static 'images/reviews/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg' %}" class="img-fluid reviews-image" alt="">
+
+                                    <figcaption class="ms-4">
+                                        <strong>Rosey</strong>
+
+                                        <span class="text-muted">Almost Recovered</span>
+                                    </figcaption>
+                                </figure>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-5 me-auto col-12">
+                        <h5 class="mb-lg-4 mb-3">Opening Hours</h5>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex">
+                                Saturday and Sunday : Closed
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                Monday, Tuesday - Firday
+                                <span>8:00 AM - 5:30 PM</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
+                        <h5 class="mb-lg-4 mb-3">{{ heading }}</h5>
+
+                        <p><a href="mailto:hello@company.co">{{ email }}</a><p>
+
+                        <p>{{ address }}</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 ms-auto">
+                        <h5 class="mb-lg-4 mb-3">Socials</h5>
+
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                        <p class="copyright-text">Copyright © HealthCare 2025
+                        <br><br>Design: <a href="https://templatemo.com" target="_parent">{{ heading }} Team</a></p>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/scrollspy.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>
