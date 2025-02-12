@@ -29,7 +29,7 @@ def details(request):
         'email' : 'GuidoValadares@gmail.com',
         'address' : 'Bidau, Dili, Timor-Leste',
     }
-    return render(request, 'GuidoValadares/details.html', context)
+    return render(request, 'GuidoValadares/blog-details.html', context)
 
 def blog(request):
     context = {
