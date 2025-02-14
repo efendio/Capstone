@@ -104,6 +104,9 @@
 
           <div class="collapse navbar-collapse" id="navbarSupport">
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index2' %}">Back</a>
+              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'GuidoValadares:index' %}"
                   >Home</a
@@ -143,7 +146,7 @@
     <div
       class="page-banner overlay-dark bg-image"
       style="
-        background-image: url({%static'GuidoValadares/img/bg_image_1.jpg'%});
+        background-image: url('{% static 'GuidoValadares/img/bg_image_1.jpg' %}');
       "
     >
       <div class="banner-section">
